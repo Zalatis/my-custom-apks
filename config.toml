@@ -77,7 +77,7 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/twitch-interactive-inc/twitch/"
 uptodown-dlurl = "https://twitch.en.uptodown.com/android"
 
 [WeatherRadar]
-enabled = true
+enabled = false
 arch = "both"
 patches-source = "TorbenStriegel/morphe-patches-custom"
 cli-source = "MorpheApp/morphe-cli"
