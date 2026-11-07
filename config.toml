@@ -75,3 +75,12 @@ include-stock = "split"
 enabled = false
 apkmirror-dlurl = "https://www.apkmirror.com/apk/twitch-interactive-inc/twitch/"
 uptodown-dlurl = "https://twitch.en.uptodown.com/android"
+
+[Weather&Radar]
+enabled = true
+patches-source = "TorbenStriegel/morphe-patches-custom"
+cli-source = "MorpheApp/morphe-cli"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/wetteronline-gmbh/weather-radar-storm-radar"
+uptodown-dlurl = "https://wetteronline.de.uptodown.com/android"
+
+
