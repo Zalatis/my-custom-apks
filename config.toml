@@ -1,13 +1,13 @@
 enable-module-update = true # set this to false if you do not want to receive updates for the module
 parallel-jobs = 1
 
-# add 'enabled = false' for not patching a specific app or remove it from the config
+# add 'enabled = true' for not patching a specific app or remove it from the config
 # see https://github.com/j-hc/revanced-magisk-module/blob/main/CONFIG.md for more detailed explanations
 
 # you can use rvmm-config-gen to generate a config
 
 [YouTube-Morphe]
-enabled = false
+enabled = true
 app-name = "YouTube"
 build-mode = "both"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/youtube/"
@@ -15,7 +15,7 @@ archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.google.android.y
 enable-update-checks = true
 
 [Music-Morphe]
-enabled = false
+enabled = true
 app-name = "Music"
 build-mode = "both"
 arch = "both"
@@ -24,7 +24,7 @@ archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.google.android.a
 enable-update-checks = true
 
 [Reddit-Morphe]
-enabled = false
+enabled = true
 app-name = "Reddit"
 build-mode = "apk"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/redditinc/reddit/"
@@ -33,7 +33,7 @@ dpi = "120-640dpi"
 enable-update-checks = true
 
 [GooglePhotos]
-enabled = false
+enabled = true
 build-mode = "both"
 patches-source = "RookieEnough/De-Vanced"
 rv-brand = "DeVanced"
@@ -42,7 +42,7 @@ archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.google.android.a
 enable-update-checks = true
 
 [Twitter]
-enabled = false
+enabled = true
 patches-source = "crimera/piko-newx"
 rv-brand = "Piko"
 archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.twitter.android"
