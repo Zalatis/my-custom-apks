@@ -10,7 +10,7 @@ parallel-jobs = 1
 enabled = false
 app-name = "YouTube"
 build-mode = "both"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/youtube"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/youtube/"
 archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.google.android.youtube"
 enable-update-checks = true
 
@@ -19,7 +19,7 @@ enabled = false
 app-name = "Music"
 build-mode = "both"
 arch = "both"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/youtube-music"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/youtube-music/"
 archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.google.android.apps.youtube.music"
 enable-update-checks = true
 
@@ -56,4 +56,5 @@ enabled = true
 arch = "both"
 patches-source = "TorbenStriegel/morphe-patches-custom"
 cli-source = "MorpheApp/morphe-cli"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/wetteronline-gmbh/weather-radar-storm-radar"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/wetteronline-gmbh/weather-radar-storm-radar/"
+archive-dlurl = "https://archive.org/download/zalati-apks/apks/de.wetteronline.wetterapp"
