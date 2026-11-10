@@ -31,6 +31,7 @@ jobs:
           if git checkout origin/update build.md; then
             UPDATE_CFG=$(./build.sh config.toml --config-update)
             if [ "$UPDATE_CFG" ]; then
+              echo "'$UPDATE_CFG'"
               echo "$UPDATE_CFG" > config.json
             fi
           fi
@@ -68,6 +69,7 @@ jobs:
           BODY: ${{ steps.get_output.outputs.BUILD_LOG }}
           TITLE: ${{ steps.get_output.outputs.RELEASE_NAME }}
         run: |
+          ls -lh ./build/*
           if gh release view "$TAG" >/dev/null 2>&1; then
             gh release edit "$TAG" --title "$TITLE" --notes "$BODY"
             gh release upload "$TAG" ./build/* --clobber
@@ -137,20 +139,19 @@ jobs:
               MODULES+="${NL}📦[${OUTPUT}](${DL_URL})"
             fi
           done
-          MODULES=${MODULES#"$NL"}
-          APKS=${APKS#"$NL"}
+          if [ -n "$MODULES" ]; then
+            MODULES="Modules:${NL}${MODULES#"$NL"}"
+            if [ -n "$APKS" ]; then MODULES+=${NL}${NL}; fi
+          fi
+          if [ -n "$APKS" ]; then APKS="APKs:${NL}${APKS#"$NL"}"; fi
 
-          BODY="$(sed 's/^\* \*\*/↪ \*\*/g; s/^\* `/↪ \*\*/g; s/`/\*/g; s/^\* /\↪/g; s/\*\*/\*/g; s/###//g; s/^- /↪ /g; /^==/d;' ../build.md)"
+          BODY="$(cat ../build.md)"
           MSG="*New build!*
 
           ${BODY}
 
           *▼ Download Links:*
-          Modules:
-          ${MODULES}
-
-          APKs:
-          ${APKS}
+          ${MODULES}${APKS}
           "
           echo "'$MSG'"
           MSG=${MSG:0:9450}
